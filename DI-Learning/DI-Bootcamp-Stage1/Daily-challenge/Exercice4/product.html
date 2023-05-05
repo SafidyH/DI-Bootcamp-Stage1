@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="products.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <style>
+            .cards {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: stretch;
+            }
+            .card {
+              flex: 0 0 200px;
+              margin: 10px;
+              border: 1px solid #ccc;
+              box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+            } 
+            .card img {
+              max-width: 100%;
+            }
+            .card .text {
+              padding: 0 20px 20px;
+            }
+            .card .text > button {
+              background: gray;
+              border: 0;
+              color: white;
+              padding: 10px;
+              width: 100%;
+              }
+
+              .btn-test:hover {
+                display: block !important;
+              }
+
+              .card:hover .shopping-buttons-container {
+                display: block;
+                }
+
+                .shopping-buttons-container {
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                }
+
+                .shopping-buttons-container .btn-outline-success {
+                    color: black;
+                    background-color: white;
+                }
+
+                .shopping-buttons-container .btn-outline-success:hover {
+                    color: white;
+                    background-color: green !important;
+                }
+          </style>
+
+        <title>Shopping Website</title>
+      </head>
+      <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                
+                  <img src="data:image/jpeg;base64,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" alt="" width="30" height="24">
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                      <label for="username">Username: </label>
+                      <input type="text" id="username" name="username"><br>
+                      <input type="submit" value="Submit">
+                    </form>
+                  </div>
+                </div>
+              </nav>
+     
+        </header>
+        
+          
+          <main class="cards">
+            <article class="card">
+              <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+              <div class="text">
+                <h3>Robe Noire</h3>
+                <p>Taille XS</p>
+                <button>buy</button>
+              </div>
+              <div class="shopping-buttons-container">
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+              <div class="text">
+                <h3>Robe Noire</h3>
+                <p>Taille XS</p>
+                <button>buy</button>
+              </div>
+              <div class="shopping-buttons-container">
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+              <div class="text">
+                <h3>Robe Noire</h3>
+                <p>Taille XS</p>
+                <button>buy</button>
+              </div>
+              <div class="shopping-buttons-container">
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+              <div class="text">
+                <h3>Robe Noire</h3>
+                <p>Taille XS</p>
+                <button>buy</button>
+              </div>
+              <div class="shopping-buttons-container">
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+              <div class="text">
+                <h3>Robe Noire</h3>
+                <p>Taille XS</p>
+                <button>buy</button>
+              </div>
+              <div class="shopping-buttons-container">
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+              <div class="text">
+                <h3>robe rouge</h3>
+                <p>taille xl</p>
+                <button>Buy</button>
+              </div>
+              <div class="shopping-buttons-container">
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+                <div class="text">
+                  <h3>Robe Noire</h3>
+                  <p>Taille XS</p>
+                  <button>buy</button>
+                </div>
+                <div class="shopping-buttons-container">
+                  <div class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+                <div class="text">
+                  <h3>Robe Noire</h3>
+                  <p>Taille XS</p>
+                  <button>buy</button>
+                </div>
+                <div class="shopping-buttons-container">
+                  <div class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+                <div class="text">
+                  <h3>Robe Noire</h3>
+                  <p>Taille XS</p>
+                  <button>buy</button>
+                </div>
+                <div class="shopping-buttons-container">
+                  <div class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+                <div class="text">
+                  <h3>Robe Noire</h3>
+                  <p>Taille XS</p>
+                  <button>buy</button>
+                </div>
+                <div class="shopping-buttons-container">
+                  <div class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+                <div class="text">
+                  <h3>Robe Noire</h3>
+                  <p>Taille XS</p>
+                  <button>buy</button>
+                </div>
+                <div class="shopping-buttons-container">
+                  <div class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0250/1433/7572/files/164149003728bc6856498c725bc7417f2afbc9ea4a_thumbnail_900x_5298bfbb-7586-4e46-8466-2c09bafd3168_900x.jpg?v=1648066462" alt="Sample photo">
+                <div class="text">
+                  <h3>robe rouge</h3>
+                  <p>taille xl</p>
+                  <button>Buy</button>
+                </div>
+                <div class="shopping-buttons-container">
+                  <div class="d-flex justify-content-around">
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-cart-shopping"></i></button>
+                      <button type="button" class="btn btn-outline-success"><i class="fa-solid fa-bag-shopping"></i></button>
+                  </div>
+                </div>
+              </article>
+        <div class="footer">
+            <p>@safidy</p>
+          </div>
+      </body>
+</html>

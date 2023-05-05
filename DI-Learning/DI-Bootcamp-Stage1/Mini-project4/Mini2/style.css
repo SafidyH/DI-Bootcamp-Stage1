@@ -1,0 +1,37 @@
+.section1 {
+    text-align: center;
+    text-emphasis-color: white;
+    background-image: url('https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_640.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+  .section2 {
+    text-align: center;
+    background-color: aliceblue;
+    text-emphasis-color: black;
+  }
+  .section3 {
+    text-align: center;
+    background-color: aliceblue;
+    text-emphasis-color: black;
+    image-resolution: 25px;
+  }
+  .section4 {
+    text-align: center;
+    background-color: aliceblue;
+    text-emphasis-color: black;
+    image-resolution: 25px;
+  }
+
+  .section5 {
+    text-align: center;
+    background-color: aliceblue;
+    text-emphasis-color: black;
+    image-resolution: 25px;
+  }
+footer{
+  text-align: center;
+  background-color: aqua;
+}
