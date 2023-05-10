@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My CV</title>
+    <style>
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: right; }
+        .item5 { grid-area: footer; }
+        
+        .grid-container {
+          display: grid;
+          grid-template-areas:
+            'header header header header header header'
+            'menu main main main right right'
+            'menu footer footer footer footer footer';
+          gap: 10px;
+          background-color: rgb(240, 233, 233);
+          padding: 10px;
+        }
+        
+        .grid-container > div {
+          background-color: rgba(255, 255, 255, 0.8);
+          text-align: center;
+          padding: 20px 0;
+          font-size: 30px;
+        }
+
+      .titre {
+        text-align: center;
+        justify-content: center;}
+        </style>
+        </head>
+       
+        
+  </head>
+  <body>
+    <div class="titre">
+      <h1>Curriculum Vitae</h1>
+    </div>  
+    <div class="grid-container">
+          <div class="item1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="https://media.licdn.com/dms/image/C4D03AQFo5rhc-rEvTA/profile-displayphoto-shrink_400_400/0/1631258593362?e=1689206400&v=beta&t=0YMljUXUN9kM7mqQBeX2a4AVn8grsE7f7dYuZNjMeF0" alt="abc">
+                    </div>
+                    <div class="col-8">
+                        <h1> Safidy Hasina Ranaivoarisena</h1>
+                        <p>Passionnée par le monde de l'informatique</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="item2">
+            <h2>Contact</h2>
+            <ul>
+                <li>Adresse</li>
+                <li>Tel</li>
+                <li>E-mail</li>
+                <li>Linkedin</li>
+            </ul>
+            <h2>Education</h2>
+            <p>
+                <h3>MCCI</h3>
+                <h3>IST</h3>
+            </p>
+          </div>
+          <div class="item3">
+            <h2>Experience1</h2>
+            <p>pour mes détails</p>
+          </div>  
+          <div class="item4">
+            <h2>Experience2</h2>
+            <p>pour mes détails</p></div>
+          <div class="item5">
+            <h2>Skills</h2>
+            <p>html, css, management</p>
+          </div>
+        </div>
+  </body>
+</html>
