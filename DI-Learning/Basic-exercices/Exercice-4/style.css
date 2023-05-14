@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background-color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.banner {
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    align-items: center;
+    
+}
+.banner_btn {
+    margin-left: 10px;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+}
+.titre {
+    height: 100px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+}
+.form_wrapper_row {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.form_input {
+    display: flex;
+    flex-direction: column;
+
+}
+input {
+    height: 20px;
+    padding: 5px;
+    
+}
+.form_select {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.select {
+    height: 30px;
+    padding: 5px;
+}
+.form_liste {
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    padding-bottom: 20px;
+}
+li {
+    font-weight: lighter;
+    margin-left: 50px;
+}
+.form_checkbox {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.form_checkbox_label {
+    margin-left: 10px;
+}
+.form_btn {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_btn_submit {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
