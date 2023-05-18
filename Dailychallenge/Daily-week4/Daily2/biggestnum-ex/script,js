@@ -1,0 +1,23 @@
+function biggestNumberInArray(arrayNumber) {
+  if (arrayNumber.length === 0) {
+    return 0;
+  }
+  
+  let biggest = arrayNumber[0];
+  
+  for (let i = 1; i < arrayNumber.length; i++) {
+    if (arrayNumber[i] > biggest) {
+      biggest = arrayNumber[i];
+    }
+  }
+  
+  return biggest;
+}
+const array = [-1, 0, 3, 100, 99, 2, 99];
+console.log(biggestNumberInArray(array));
+
+const array2 = ['a', 3, 4, 2];
+console.log(biggestNumberInArray(array2));
+
+const array3 = [];
+console.log(biggestNumberInArray(array3));
