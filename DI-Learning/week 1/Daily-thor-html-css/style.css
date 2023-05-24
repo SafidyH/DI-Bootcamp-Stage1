@@ -1,0 +1,118 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: right;
+    padding: 20px 16px;
+    text-decoration: none;
+  }
+  
+  body {
+    text-align: left;
+    text-emphasis-color: white;
+    background-image: url('./168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
+  .red{
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+  }
+  h1{font-size: 75px;}
+
+  p{
+    text-align: left;
+    width:50%;
+}
+header{
+  background-color: #333;
+  display:flex;
+  width:100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  p {
+    font-size: 12px;
+    width:100%;
+  }
+  h1{font-size: 25px;}
+
+  li a {
+  font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  p {
+    font-size: 30px;
+    width:100%;
+  }
+  h1{font-size: 50px;}
+
+  li a {
+  font-size: 25px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+  
+  p {
+    font-size: 20px;
+    color: red;
+  }
+  
+  li a {
+    color: blue;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: lightgreen;
+  }
+  
+  p {
+    font-size: 24px;
+    color: purple;
+  }
+  
+  li a {
+    color: orange;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: lightyellow;
+  }
+  
+  p {
+    font-size: 28px;
+    color: darkblue;
+  }
+  
+  li a {
+    color: darkgreen;
+  }
+}

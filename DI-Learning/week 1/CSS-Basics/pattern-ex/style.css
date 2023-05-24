@@ -1,0 +1,32 @@
+.pattern-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    border-color: bisque;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    border-color: aqua;
+  }
+  
+  .square {
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border-color: aquamarine;
+  }
+  
+  .square:nth-child(3n+1) {
+    background-color: #FF0000;
+    border-color: #0000FF;
+  }
+  
+  .square:nth-child(3n+2) {
+    background-color: #00FF00;
+  }
+  
+  .square:nth-child(3n+3) {
+    background-color: #0000FF;
+  }

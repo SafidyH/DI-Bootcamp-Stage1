@@ -1,0 +1,25 @@
+.site-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .site-info h2 {
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .social-icons a:last-child {
+    margin-right: 0;
+  }
